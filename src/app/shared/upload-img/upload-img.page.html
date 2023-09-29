@@ -1,0 +1,19 @@
+<div *ngIf="!imageView" [ngClass]="valorMax ? 'container-max' : 'outer-without-img'">
+  <ion-icon name="image-outline" class="image-icono"></ion-icon>
+  <p>{{ 'Upload Image' }}</p>
+  <div class="inner" >
+    <ion-icon name="camera"  class="camera-icon" (click)="pickImage()"></ion-icon>
+  </div>
+  <div class="inner-max" (click)="maxImage()">
+    <ion-icon [title]="!valorMax?'Maximizar':'Minimizar'" [name]="!valorMax?'chevron-expand-outline':'chevron-collapse-outline'" class="camera-sup"></ion-icon>
+  </div>
+</div>
+
+<div *ngIf="imageView"  [ngClass]="valorMax ? 'container-max' : 'outer'" [ngStyle]="{'background-image': 'url(' + imageView + ')'}">
+  <div class="inner" (click)="pickImage()">
+    <ion-icon name="camera" class="camera-icon"></ion-icon>
+  </div>
+  <div class="inner-max" (click)="maxImage()">
+    <ion-icon name="chevron-expand-outline" class="camera-sup"></ion-icon>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "banca-digital",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

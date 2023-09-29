@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-tab-home',
+  templateUrl: 'tab-home.page.html',
+  styleUrls: ['tab-home.page.scss']
+})
+export class TabHomePage {
+
+  showLoader: boolean = false;
+
+  constructor() {}
+
+  ngOnInit(){
+
+  }
+
+  initialLoader(){
+    this.showLoader = !this.showLoader;
+  }
+
+  loadingStatus(status:any){
+    console.log(status)
+    this.showLoader = status;
+  }
+}

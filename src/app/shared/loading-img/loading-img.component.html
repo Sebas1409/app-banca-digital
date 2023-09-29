@@ -1,0 +1,16 @@
+<div class="main_content_div_ads" *ngIf="showLoader" >
+  <div  [ngClass]="valorMax ? 'slider_max' : 'slider_div'">
+    <ion-content class="ion-padding">
+      <div class="bg_image back_image" [style.backgroundImage]="'url('+ imagesAndTexts[currentIndex].image +')'">
+        <div class="overlay">
+          <ion-label>{{imagesAndTexts[currentIndex].text}}</ion-label>
+        </div>
+      </div>
+    </ion-content>
+    <div class="inner-max" (click)="maxImage()">
+      <ion-icon [title]="!valorMax?'Maximizar':'Minimizar'" [name]="!valorMax?'chevron-expand-outline':'chevron-collapse-outline'" class="camera-sup"></ion-icon>
+    </div>
+  </div>
+
+</div>
+
